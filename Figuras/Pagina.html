@@ -1,8 +1,8 @@
 <HTML>
 
 	<HEAD>
-
- <style type="text/css">
+  <link rel="JavaScript" href="controlador.js">
+  <style type="text/css">
    
    * {
     margin:0px;
@@ -55,10 +55,40 @@
    }
    
   </style>
-
+ 
 
 
    		<SCRIPT LANGUAGE="JavaScript">
+        function calcular(){
+              var num1 = document.getElementById("num1").value;
+              num1=parseFloat(num1);
+              var num2 = document.getElementById("num2").value;
+              num2=parseFloat(num2);
+              alert(num2 +num1);
+                }
+        function cambiaImagen(index){
+              if (index == 0){
+                document.getElementById("figura").hidden = false;
+                document.getElementById("figura").name = "0";
+                  document.getElementById("figura").src = "Imagenes/Cilindo.jpg";
+                  document.getElementById("num1").placeholder = "Radio del Cilindro";
+                  document.getElementById("num2").placeholder= "Altura del Cilindro";
+              } else if (index == 1){
+                document.getElementById("figura").src = "Imagenes/Cono.jpg";
+              }
+              else if (index == 2){
+                document.getElementById("figura").src = "Imagenes/Cubo.jpg";
+              }
+              else if (index == 3){
+                document.getElementById("figura").src = "Imagenes/Esfera.jpg";
+              }
+              else if (index == 4){
+                document.getElementById("figura").src = "Imagenes/Piramide.jpg";
+              }
+              else if (index == 5){
+                document.getElementById("figura").src = "Imagenes/PrismaPentagonal.jpg";
+              }
+        }
    		</SCRIPT>
 
 
@@ -70,41 +100,31 @@
 
 <BODY BGCOLOR="Orange"><FONT COLOR="Black"><H1><P ALIGN="CENTER">
 
-	<div id="header">
 
-		<ul class="Menu">
-			<li><a href=" ">Inicio</a></li>
-			
-			<li><a href=" ">Area</a>
-				<ul>
-					<li><a href=" ">Cilindro</a></li>
-					<li><a href=" ">Cubo</a></li>
-					<li><a href=" ">Piramide</a></li>
-					<li><a href=" ">Esfera</a></li>
-					<li><a href=" ">Prisma</a></li>
-					<li><a href=" ">Cono</a></li>
-				</ul>
-			</li>
-
-			<li><a href=" ">Perimetro</a>
-				<ul>
-					<li><a href=" ">Cilindro</a></li>
-					<li><a href=" ">Cubo</a></li>
-					<li><a href=" ">Piramide</a></li>
-					<li><a href=" ">Esfera</a></li>
-					<li><a href=" ">Prisma</a></li>
-					<li><a href=" ">Cono</a></li>
-				</ul>
-			</li>
-
-			<li><a href=" ">Operaciones</a>
-				<ul>
-					<li><a href=" ">Ecuacion</a></li>
-					<li><a href=" ">Tabla</a></li>
-				</ul>
-			</li>
-
-		</ul>
+    <br>
+    <div >
+      <center>
+    <button id="0" onClick="cambiaImagen(0)">Cilindro</button>      
+    <button id="1" onClick="cambiaImagen(1)">Cono</button> 
+    <button id="2" onClick="cambiaImagen(2)">Cubo</button>
+    <button id="3" onClick="cambiaImagen(3)">Esfera</button>
+    <button id="4" onClick="cambiaImagen(4)">Piramide</button>
+    <button id="5" onClick="cambiaImagen(5)">Prisma Pentagonal</button>
+    </center>    
+    </div>
+    <br>
+    <div>
+      <center>
+      <input id="num1" type="text" placeholder="holi">
+      <br>
+      <input id="num2" type="text"  placeholder="holi">
+      <br>
+     <button id="calcula" onClick="calcular()">Hola soy el boton</button>
+     <br>
+     <img id="figura" src="Imagenes/Cono.jpg" hidden="true" />
+     </center>
+    </div>
+    
 					
 						
 
