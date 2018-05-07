@@ -65,29 +65,51 @@
               var num2 = document.getElementById("num2").value;
               num2=parseFloat(num2);
               alert(num2 +num1);
+              if(document.getElementById("figura").name = "0"){
+                  Cilindro(num1,num2);
                 }
+              else if(document.getElementById("figura").name = "1"){
+                Cono(num1,num2);
+              }
+              else if(document.getElementById("figura").name = "2"){
+                Cubo(num1);
+              }
+              else if(document.getElementById("figura").name = "3"){
+                Esfera(num1);
+              }
+
+              }
         function cambiaImagen(index){
               if (index == 0){
                 document.getElementById("figura").hidden = false;
+                document.getElementById("num2").hidden= false;
                 document.getElementById("figura").name = "0";
-                  document.getElementById("figura").src = "Imagenes/Cilindo.jpg";
-                  document.getElementById("num1").placeholder = "Radio del Cilindro";
-                  document.getElementById("num2").placeholder= "Altura del Cilindro";
+                document.getElementById("figura").src = "Imagenes/Cilindo.jpg";
+                document.getElementById("num1").placeholder = "Radio del Cilindro";
+                document.getElementById("num2").placeholder= "Altura del Cilindro";
               } else if (index == 1){
                 document.getElementById("figura").src = "Imagenes/Cono.jpg";
+                document.getElementById("num2").hidden= false;
+                document.getElementById("num1").placeholder = "Radio del Cono";
+                document.getElementById("num2").placeholder= "Altura del Cono";
+                document.getElementById("figura").hidden = false;
+                document.getElementById("figura").name = "1";
               }
               else if (index == 2){
                 document.getElementById("figura").src = "Imagenes/Cubo.jpg";
+                document.getElementById("num1").placeholder = "Lado del cubo";
+                document.getElementById("num2").hidden= true;
+                document.getElementById("figura").hidden = false;
+                document.getElementById("figura").name = "2";
               }
               else if (index == 3){
                 document.getElementById("figura").src = "Imagenes/Esfera.jpg";
+                document.getElementById("num1").placeholder = "Radio de la Esfera";
+                document.getElementById("num2").hidden= true;
+                document.getElementById("figura").hidden = false;
+                document.getElementById("figura").name = "3";
               }
-              else if (index == 4){
-                document.getElementById("figura").src = "Imagenes/Piramide.jpg";
-              }
-              else if (index == 5){
-                document.getElementById("figura").src = "Imagenes/PrismaPentagonal.jpg";
-              }
+
         }
    		</SCRIPT>
 
@@ -108,8 +130,7 @@
     <button id="1" onClick="cambiaImagen(1)">Cono</button> 
     <button id="2" onClick="cambiaImagen(2)">Cubo</button>
     <button id="3" onClick="cambiaImagen(3)">Esfera</button>
-    <button id="4" onClick="cambiaImagen(4)">Piramide</button>
-    <button id="5" onClick="cambiaImagen(5)">Prisma Pentagonal</button>
+  
     </center>    
     </div>
     <br>
@@ -119,7 +140,7 @@
       <br>
       <input id="num2" type="text"  placeholder="holi">
       <br>
-     <button id="calcula" onClick="calcular()">Hola soy el boton</button>
+     <button id="calcula" onClick="calcular()">Calcular!</button>
      <br>
      <img id="figura" src="Imagenes/Cono.jpg" hidden="true" />
      </center>
