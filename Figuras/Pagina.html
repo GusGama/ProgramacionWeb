@@ -95,6 +95,9 @@
                 document.getElementById("num2").hidden= false;
                 document.getElementById("figura").name = "0";
                 document.getElementById("figura").src = "Imagenes/Cilindo.jpg";
+                document.getElementById("calcula").hidden = false;
+                 document.getElementById("num1").hidden = false;
+                 document.getElementById("num2").hidden = false;
                 document.getElementById("num1").placeholder = "Radio del Cilindro";
                 document.getElementById("num2").placeholder= "Altura del Cilindro";
               } else if (index == 1){
@@ -102,12 +105,17 @@
                 document.getElementById("num2").hidden= false;
                 document.getElementById("num1").placeholder = "Radio del Cono";
                 document.getElementById("num2").placeholder= "Altura del Cono";
+                document.getElementById("num1").hidden = false;
+                document.getElementById("calcula").hidden = false;
+                 document.getElementById("num2").hidden = false;
                 document.getElementById("figura").hidden = false;
                 document.getElementById("figura").name = "1";
               }
               else if (index == 2){
                 document.getElementById("figura").src = "Imagenes/Cubo.jpg";
                 document.getElementById("num1").placeholder = "Lado del cubo";
+                document.getElementById("num1").hidden = false;
+                document.getElementById("calcula").hidden = false;
                 document.getElementById("num2").hidden= true;
                 document.getElementById("figura").hidden = false;
                 document.getElementById("figura").name = "2";
@@ -115,6 +123,8 @@
               else if (index == 3){
                 document.getElementById("figura").src = "Imagenes/Esfera.jpg";
                 document.getElementById("num1").placeholder = "Radio de la Esfera";
+                document.getElementById("num1").disabled = false;
+                document.getElementById("calcula").hidden = false;
                 document.getElementById("num2").hidden= true;
                 document.getElementById("figura").hidden = false;
                 document.getElementById("figura").name = "3";
@@ -146,11 +156,11 @@
     <br>
     <div>
       <center>
-      <input id="num1" type="text" placeholder="Numero">
+      <input id="num1" type="number" hidden placeholder="Numero">
       <br>
-      <input id="num2" type="text"  placeholder="Numero">
+      <input id="num2" type="number" hidden  placeholder="Numero">
       <br>
-     <button id="calcula" onClick="calcular()">Calcular!</button>
+     <button id="calcula" onClick="calcular()" hidden>Calcular!</button>
      <br>
      <img id="figura" src="Imagenes/Cono.jpg" hidden="true" />
      </center>
