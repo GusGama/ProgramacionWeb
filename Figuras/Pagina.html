@@ -59,22 +59,32 @@
 
 
    		<SCRIPT LANGUAGE="JavaScript">
+        function Cilindro(radio, altura) 
+             { alert("El volumen del Cilindro es: "+(3.1416*radio*radio)*altura);  }
+
+        function Cono(radio, altura) 
+              { alert("El volumen del Cilindro es: "+((3.1416*radio*radio)*altura)/3);  }
+
+        function Cubo(lado) 
+              { alert("El volumen del Cubo es: "+(lado*lado*lado));  }
+
+        function Esfera(radio) 
+              { alert("El volumen de la Esfera es: "+(4*3.1416*(radio*radio))/3);  }
         function calcular(){
               var num1 = document.getElementById("num1").value;
               num1=parseFloat(num1);
               var num2 = document.getElementById("num2").value;
               num2=parseFloat(num2);
-              alert(num2 +num1);
-              if(document.getElementById("figura").name = "0"){
+              if(document.getElementById("figura").name == "0"){
                   Cilindro(num1,num2);
                 }
-              else if(document.getElementById("figura").name = "1"){
-                Cono(num1,num2);
+              else if(document.getElementById("figura").name == "1"){
+                Cubo(num1,num2);
               }
-              else if(document.getElementById("figura").name = "2"){
+              else if(document.getElementById("figura").name == "2"){
                 Cubo(num1);
               }
-              else if(document.getElementById("figura").name = "3"){
+              else if(document.getElementById("figura").name == "3"){
                 Esfera(num1);
               }
 
