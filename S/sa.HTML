@@ -1,0 +1,112 @@
+<HTML>
+<HEAD>
+
+   <SCRIPT LANGUAGE="JavaScript">
+     function valores(nom,Ap,Am,Ed,Num,NminM,NmaxM)
+    {
+        var y;
+        var salida="";
+        Ed=parseFloat(Ed);
+        Num=parseFloat(Num);
+ 	NminM=parseFloat(NminM);
+	NmaxM=parseFloat(NmaxM);
+	
+
+
+	if(Ed<18)
+	{
+	 alert(nom+" "+Ap+" "+Am+" "+"No puedes acceder por ser menor de edad");
+	}
+
+	else
+	{
+	
+	if((NmaxM-NminM)>15)
+	{
+	alert("No puedo Realizar tablas mayores a 15 numeros");
+	}
+	else
+	
+	{
+
+ 	for(i=NminM;i<=NmaxM;i=i+1)
+            {
+     	    y=Num*i;
+	    salida=salida+Num+" x "+i+" = "+y+"<BR>";
+	    }
+
+	 document.write("<center>"+nom+" "+Ap+" "+Am+"<BR>");
+
+
+	 document.write("<center>"+"TABLA del "+Num+" de "+NminM+" al "+NmaxM+":"+"<BR>");
+
+
+	 document.write("<center>"+salida);
+
+	}
+	}
+	}
+
+ </SCRIPT>
+</HEAD>
+
+
+<BODY BGCOLOR="Orange"><FONT COLOR="Black"><H1><P ALIGN="CENTER">
+TABLA DE DATOS: </H1>
+
+<FORM>
+
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+   <TD><font color="Black">Nombre:</TD>
+   <TD> <INPUT TYPE="text" NAME="Nom" SIZE=18 MAXLENGTH=18> 
+
+<TR>
+   <TD><font color="Black">Apellido Paterno:</TD>
+   <TD> <INPUT TYPE="text" NAME="AP" SIZE=18 MAXLENGTH=18></TD>
+
+<TR>
+   <TD><font color="Black">Apellido Materno:</TD>
+   <TD> <INPUT TYPE="text" NAME="AM" SIZE=18 MAXLENGTH=18></TD>
+
+<TR>
+   <TD><font color="Black">Edad:</TD>
+   <TD> <INPUT TYPE="text" NAME="Ed" SIZE=18 MAXLENGTH=52></TD>
+
+<TR>
+   <TD><font color="Black">Numero a Multiplicar:</TD>
+   <TD> <INPUT TYPE="text" NAME="NumM" SIZE=18 MAXLENGTH=52></TD>
+
+<TR>
+   <TD><font color="Black">Minimo valor a multiuplicar:</TD>
+   <TD> <INPUT TYPE="text" NAME="MinM" SIZE=18 MAXLENGTH=52></TD>
+
+<TR>
+   <TD><font color="Black">Maximo valor a multiuplicar:</TD>
+   <TD> <INPUT TYPE="text" NAME="MaxM" SIZE=18 MAXLENGTH=52></TD>
+</TABLE>
+</CENTER>
+
+
+<CENTER>
+<INPUT TYPE="button" VALUE="INGRESAR"
+onClick="valores(document.forms[0].Nom.value,
+	document.forms[0].AP.value, 
+	document.forms[0].AM.value,
+	document.forms[0].Ed.value,
+	document.forms[0].NumM.value,
+	document.forms[0].MinM.value,
+	document.forms[0].MaxM.value);"></CENTER>
+
+<BR>
+</FORM>
+
+<CENTER>
+<img src="Imagen.JPG" alt="descripción" /> 
+
+</BODY>
+
+
+</HTML>
